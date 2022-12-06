@@ -3,11 +3,11 @@ from functools import lru_cache
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         
-        # Find the most optimal solution with backtrackimg
+        # Find the most optimal solution with backtracking
         @lru_cache(None)
         def backtracking(amount):
             if amount == 0: return 0 # a solution
-            if amount < 0: return -1 # went to far, not a solution
+            if amount < 0: return -1 # went t0o far, not a solution
 
             count = float('inf') # coins needed
             for coin in coins:
