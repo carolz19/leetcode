@@ -7,7 +7,7 @@ class Solution:
         @lru_cache(None)
         def backtracking(amount):
             if amount == 0: return 0 # a solution
-            if amount < 0: return -1 # went t0o far, not a solution
+            if amount < 0: return -1 # went too far, not a solution
 
             count = float('inf') # coins needed
             for coin in coins:
